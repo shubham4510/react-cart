@@ -1,9 +1,10 @@
 import React from 'react'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import './styles/App.css'
 import Home from './components/Home'
 import Cart from './components/Cart'
 import Navbar from './components/Navbar'
-import './styles/App.css'
+import NotFound from './components/NotFound'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/cart' element={<Cart/>}/>
+                <Route path='*' element={<NotFound/>}/>
             </Routes>
         </Router>
     </div>
